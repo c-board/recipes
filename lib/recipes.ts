@@ -1,13 +1,33 @@
-import { readdir, readFile } from "fs/promises";
+import { access, readdir, readFile } from "fs/promises";
+import { constants } from "fs";
 import path from "path";
 
 export type Recipe = {
   slug: string;
   title: string;
   content: string;
+  image?: string;
 };
 
 const RECIPES_DIR = path.join(process.cwd(), "recipes");
+
+async function getRecipeImage(slug: string): Promise<string | undefined> {
+  const locations = [
+    path.join(process.cwd(), "assets", `${slug}.png`),
+    path.join(process.cwd(), "public", "assets", `${slug}.png`),
+  ];
+
+  for (const location of locations) {
+    try {
+      await access(location, constants.F_OK);
+      return `/assets/${slug}.png`;
+    } catch {
+      continue;
+    }
+  }
+
+  return undefined;
+}
 
 export function slugToTitle(slug: string): string {
   return slug
@@ -31,10 +51,13 @@ export async function getAllRecipes(): Promise<Recipe[]> {
         path.join(RECIPES_DIR, `${slug}.md`),
         "utf-8",
       );
+      const image = await getRecipeImage(slug);
+
       return {
         slug,
         title: slugToTitle(slug),
         content,
+        image,
       };
     }),
   );
@@ -47,10 +70,13 @@ export async function getRecipeBySlug(slug: string): Promise<Recipe | null> {
 
   try {
     const content = await readFile(filePath, "utf-8");
+    const image = await getRecipeImage(slug);
+
     return {
       slug,
       title: slugToTitle(slug),
       content,
+      image,
     };
   } catch {
     return null;

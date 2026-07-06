@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import { RecipeImageButton } from "@/components/RecipeImageModal";
 import { getAllRecipes, getRecipeBySlug } from "@/lib/recipes";
 
 type RecipePageProps = {
@@ -39,9 +40,15 @@ export default async function RecipePage({ params }: RecipePageProps) {
       >
         ← All recipes
       </Link>
-      <h1 className="mb-8 text-3xl font-semibold tracking-tight">
+      <h1 className="mb-4 text-3xl font-semibold tracking-tight">
         {recipe.title}
       </h1>
+      {recipe.image ? (
+        <RecipeImageButton
+          imageSrc={recipe.image}
+          imageAlt={`Photo of ${recipe.title}`}
+        />
+      ) : null}
       <article className="recipe-prose">
         <ReactMarkdown>{recipe.content}</ReactMarkdown>
       </article>
