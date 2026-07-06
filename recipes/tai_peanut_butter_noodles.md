@@ -1,5 +1,3 @@
-# Tai Peanut Butter Noodles
-
 ## Ingredients
 
 ### Sauce

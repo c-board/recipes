@@ -1,17 +1,15 @@
-# Jerky Recipe
+## Ingredients
 
-- Select a center round cut of beef
-
-Merinade Ingredients
-- 2 tablespoons of black pepper
+- center round cut of beef
+- 2 tablespoons black pepper
 - 1 smoked paprika
 - 1/4 teaspoon cajun
-- 1 teaspoon of red pepper flakes
-- 1 teaspoon of garlic powder
-- 1 teaspoon of onion powder
-- 1 tablespoon of honey
+- 1 teaspoon red pepper flakes
+- 1 teaspoon garlic powder
+- 1 teaspoon onion powder
+- 1 tablespoon honey
 
-Process
-- merinade overnight
-- smoke on traegar 6-8 hours to taste
--
+## Instructions
+
+1. Marinade overnight.
+2. Smoke on Traeger for 6–8 hours to taste.

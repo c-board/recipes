@@ -1,5 +1,10 @@
-# Salmon
+## Ingredients
 
-- slice into cubes
-- season to taste
-- throw in oven until proper internal temp
+- salmon
+- seasoning
+
+## Instructions
+
+1. Slice into cubes.
+2. Season to taste.
+3. Throw in oven until proper internal temperature.

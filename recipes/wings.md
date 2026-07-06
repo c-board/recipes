@@ -1,12 +1,11 @@
-# Wings
+## Ingredients
 
 - flour
-- franks wing powdered seasoning
+- Frank's wing powdered seasoning
 - red pepper flakes (optional)
 
-### cook - air fry
-- 20 minutes at 300
-- standard air fry setting
-- take out and cool in fridge 30 minutes
-- 13 minutes at 400
-- max crisp setting
+## Instructions
+
+1. Air fry for 20 minutes at 300 using the standard air fry setting.
+2. Take out and cool in the fridge for 30 minutes.
+3. Air fry for 13 minutes at 400 using the max crisp setting.

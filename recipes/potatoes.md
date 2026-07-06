@@ -1,9 +1,14 @@
-# Smoked & Mashed
+## Ingredients
 
-	- slow smoke the potatoes
-	- mash them lightly
-	- add pickled onions
-	- add fresh chives
-	- add sour cream
-	- add bacon
-	- add seasoning salt
+- potatoes
+- pickled onions
+- fresh chives
+- sour cream
+- bacon
+- seasoning salt
+
+## Instructions
+
+1. Slow smoke the potatoes.
+2. Mash them lightly.
+3. Add pickled onions, fresh chives, sour cream, bacon, and seasoning salt.

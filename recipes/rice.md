@@ -1,15 +1,20 @@
-# Sushi Rice
-  - 1 cup rice
-  - 1.75 cups water
+## Ingredients
 
----
+### Sushi Rice
 
-# Brown rice
-  - 1 cup rice
-  - 2 cups water
+- 1 cup rice
+- 1.75 cups water
 
---- 
+### Brown Rice
 
-# Mixed rice
-  - 1 cup rice
-  - 2 cups water
+- 1 cup rice
+- 2 cups water
+
+### Mixed Rice
+
+- 1 cup rice
+- 2 cups water
+
+## Instructions
+
+1. Rinse rice and cook with the listed water ratio.
