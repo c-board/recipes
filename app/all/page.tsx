@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { AllRecipes } from "@/components/AllRecipes";
+import ReactMarkdown from "react-markdown";
 import { getAllRecipes } from "@/lib/recipes";
 
 export const metadata: Metadata = {
   title: "All Recipes",
-  robots: { index: false, follow: false },
 };
 
 export default async function AllRecipesPage() {
@@ -15,7 +14,18 @@ export default async function AllRecipesPage() {
       <header className="mb-8">
         <h1 className="text-4xl font-semibold tracking-tight">All Recipes</h1>
       </header>
-      <AllRecipes recipes={recipes} />
+      <div className="space-y-12">
+        {recipes.map((recipe) => (
+          <section key={recipe.slug} id={recipe.slug} className="scroll-mt-8">
+            <h2 className="mb-4 border-b border-zinc-200 pb-2 text-2xl font-semibold tracking-tight dark:border-zinc-800">
+              {recipe.title}
+            </h2>
+            <article className="recipe-prose">
+              <ReactMarkdown>{recipe.content}</ReactMarkdown>
+            </article>
+          </section>
+        ))}
+      </div>
     </div>
   );
 }
