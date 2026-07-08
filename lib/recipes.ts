@@ -29,10 +29,20 @@ async function getRecipeImage(slug: string): Promise<string | undefined> {
   return undefined;
 }
 
+const SPECIAL_CASE_WORDS: Record<string, string> = {
+  kfc: "KFC",
+};
+
 export function slugToTitle(slug: string): string {
   return slug
     .split("_")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => {
+      const special = SPECIAL_CASE_WORDS[word.toLowerCase()];
+      if (special) {
+        return special;
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
     .join(" ");
 }
 
