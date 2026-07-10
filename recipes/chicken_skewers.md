@@ -12,7 +12,7 @@
 
 ## Instructions
 
-1. Cut chicken into bite sized chunks and toss with olive oil, salt, pepper, garlic powder, and paprika.
+1. Cut chicken into bite-sized chunks and toss with olive oil, salt, pepper, garlic powder, and paprika.
 2. Thread the chicken onto skewers.
 3. Grill over medium-high heat, turning occasionally, until charred and cooked through.
 4. Slice slits in the potatoes and smoke them
