@@ -1,7 +1,7 @@
 ## Ingredients
 
 - flour
-- frank's wing powdered seasoning
+- Frank's wing powdered seasoning
 - red pepper flakes (optional)
 
 ## Instructions
