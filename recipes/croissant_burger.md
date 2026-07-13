@@ -8,7 +8,6 @@
 - sriracha
 - fresh white onion
 
-
 ## Instructions
 
 1. Form the ground beef into patties and season both sides. Cook in a skillet or on the grill until done to your liking.
