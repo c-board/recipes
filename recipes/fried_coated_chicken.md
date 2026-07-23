@@ -3,6 +3,7 @@
 - chicken breasts
 - salt
 - black pepper
+- flour
 - eggs
 - crackers
 - parmesan
