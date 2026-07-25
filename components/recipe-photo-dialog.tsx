@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
+import { RecipeImage } from "@/components/recipe-image";
 import {
   Dialog,
   DialogContent,
@@ -25,37 +25,32 @@ export const RecipePhotoDialog = ({
         render={
           <button
             type="button"
-            className="group w-full overflow-hidden rounded-xl bg-muted ring-1 ring-foreground/10 transition-[opacity,box-shadow] hover:opacity-90 focus-visible:ring-3 focus-visible:ring-ring/50"
+            className="group w-full overflow-hidden rounded-xl ring-1 ring-foreground/10 transition-[opacity,box-shadow] hover:opacity-90 focus-visible:ring-3 focus-visible:ring-ring/50"
             aria-label={`View larger ${imageAlt}`}
           />
         }
       >
-        <span className="relative block aspect-video w-full">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 768px"
-            priority
-          />
-        </span>
+        <RecipeImage
+          src={imageSrc}
+          alt={imageAlt}
+          className="aspect-video w-full"
+          imageClassName="object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
       </DialogTrigger>
       <DialogContent className="sm:max-w-4xl" aria-describedby={undefined}>
         <DialogHeader>
           <DialogTitle>{imageAlt}</DialogTitle>
         </DialogHeader>
-        <div className="relative flex max-h-[70vh] items-center justify-center overflow-hidden rounded-lg bg-muted">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            width={1600}
-            height={1200}
-            className="h-auto max-h-[70vh] w-auto max-w-full object-contain"
-            sizes="100vw"
-            priority
-          />
-        </div>
+        <RecipeImage
+          src={imageSrc}
+          alt={imageAlt}
+          className="aspect-video w-full rounded-lg"
+          imageClassName="object-contain"
+          sizes="100vw"
+          priority
+        />
       </DialogContent>
     </Dialog>
   );

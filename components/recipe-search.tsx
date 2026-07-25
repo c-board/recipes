@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import type { Recipe } from "@/lib/recipes";
+import { RecipeImage } from "@/components/recipe-image";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
@@ -55,15 +55,13 @@ export const RecipeSearch = ({ recipes }: RecipeSearchProps) => {
               <li key={recipe.slug}>
                 <Link href={`/recipes/${recipe.slug}`} className="block">
                   <Card className="transition-colors hover:bg-muted/50">
-                    <div className="relative aspect-video w-full bg-muted">
-                      <Image
-                        src={imageSrc}
-                        alt={imageAlt}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                    </div>
+                    <RecipeImage
+                      src={imageSrc}
+                      alt={imageAlt}
+                      className="aspect-video w-full"
+                      imageClassName="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                     <CardHeader>
                       <CardTitle>{recipe.title}</CardTitle>
                     </CardHeader>
