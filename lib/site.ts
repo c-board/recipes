@@ -1,3 +1,3 @@
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://recipies.example.com"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://recipes.example.com"
 ).replace(/\/$/, "");
