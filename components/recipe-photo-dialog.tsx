@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -22,13 +21,27 @@ export const RecipePhotoDialog = ({
 }: RecipePhotoDialogProps) => {
   return (
     <Dialog>
-      <DialogTrigger render={<Button variant="outline" />}>
-        View photo
-      </DialogTrigger>
-      <DialogContent
-        className="sm:max-w-4xl"
-        aria-describedby={undefined}
+      <DialogTrigger
+        render={
+          <button
+            type="button"
+            className="group w-full overflow-hidden rounded-xl bg-muted ring-1 ring-foreground/10 transition-[opacity,box-shadow] hover:opacity-90 focus-visible:ring-3 focus-visible:ring-ring/50"
+            aria-label={`View larger ${imageAlt}`}
+          />
+        }
       >
+        <span className="relative block aspect-video w-full">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </span>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-4xl" aria-describedby={undefined}>
         <DialogHeader>
           <DialogTitle>{imageAlt}</DialogTitle>
         </DialogHeader>
