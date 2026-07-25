@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Recipes",
   description: "Personal recipe collection",
-  icons: {
-    icon: "/assets/logo.png",
-    apple: "/assets/logo.png",
+  appleWebApp: {
+    capable: true,
+    title: "Recipes",
   },
 };
 
