@@ -1,10 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import type { Recipe } from "@/lib/recipes";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+
+const PLACEHOLDER_IMAGE = "/assets/recipe-placeholder.svg";
 
 type RecipeSearchProps = {
   recipes: Recipe[];
@@ -42,17 +45,33 @@ export const RecipeSearch = ({ recipes }: RecipeSearchProps) => {
 
       {filtered.length > 0 ? (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((recipe) => (
-            <li key={recipe.slug}>
-              <Link href={`/recipes/${recipe.slug}`} className="block">
-                <Card className="transition-colors hover:bg-muted/50">
-                  <CardHeader>
-                    <CardTitle>{recipe.title}</CardTitle>
-                  </CardHeader>
-                </Card>
-              </Link>
-            </li>
-          ))}
+          {filtered.map((recipe) => {
+            const imageSrc = recipe.image ?? PLACEHOLDER_IMAGE;
+            const imageAlt = recipe.image
+              ? `Photo of ${recipe.title}`
+              : `No photo for ${recipe.title}`;
+
+            return (
+              <li key={recipe.slug}>
+                <Link href={`/recipes/${recipe.slug}`} className="block">
+                  <Card className="transition-colors hover:bg-muted/50">
+                    <div className="relative aspect-video w-full bg-muted">
+                      <Image
+                        src={imageSrc}
+                        alt={imageAlt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle>{recipe.title}</CardTitle>
+                    </CardHeader>
+                  </Card>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       ) : (
         <Card>

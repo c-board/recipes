@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" fill="none" role="img" aria-label="Recipe photo placeholder">
+  <rect width="960" height="540" fill="#F4F4F5"/>
+  <g transform="translate(480 270)" fill="none" stroke="#A1A1AA" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <circle r="90"/>
+    <circle r="48"/>
+    <path d="M-140 -20h-48M188 -20h48M-140 20h-32M172 20h32"/>
+    <path d="M-24 -150v-36M24 -150v-36"/>
+  </g>
+</svg>
