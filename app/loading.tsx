@@ -6,7 +6,10 @@ export default function HomeLoading() {
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 px-6 py-12">
       <header className="flex flex-col gap-2">
-        <Skeleton className="h-10 w-40" />
+        <div className="flex items-center gap-3">
+          <Skeleton className="size-12 rounded-full" />
+          <Skeleton className="h-10 w-40" />
+        </div>
         <Skeleton className="h-5 w-56" />
       </header>
       <Separator />
