@@ -11,13 +11,7 @@ export default async function Home() {
         <h1 className="font-heading text-4xl font-semibold tracking-tight">
           Recipes
         </h1>
-        <p className="text-muted-foreground">
-          Personal recipe collection · Press{" "}
-          <kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono text-xs">
-            ⌘K
-          </kbd>{" "}
-          to search
-        </p>
+        <p className="text-muted-foreground">Personal recipe collection</p>
       </header>
       <Separator />
       <RecipeSearch recipes={recipes} />
