@@ -29,11 +29,6 @@ export const RecipeSearch = ({ recipes }: RecipeSearchProps) => {
 
   return (
     <div className="flex flex-col gap-6">
-      <p className="text-sm text-muted-foreground">
-        {trimmedQuery
-          ? `${filtered.length} of ${recipes.length} recipes`
-          : `${recipes.length} recipes`}
-      </p>
 
       <Input
         type="search"

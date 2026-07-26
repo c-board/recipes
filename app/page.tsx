@@ -22,10 +22,9 @@ export default async function Home() {
             Recipes
           </h1>
         </div>
-        <p className="text-muted-foreground">Personal recipe collection</p>
       </header>
-      <Separator />
       <RecipeSearch recipes={recipes} />
+      <Separator />
     </main>
   );
 }
