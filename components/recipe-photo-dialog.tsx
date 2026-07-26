@@ -1,9 +1,12 @@
 "use client";
 
+import { XIcon } from "lucide-react";
 import React from "react";
 import { RecipeImage } from "@/components/recipe-image";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogHeader,
   DialogTitle,
@@ -40,20 +43,50 @@ export const RecipePhotoDialog = ({
         />
       </DialogTrigger>
       <DialogContent
-        className="w-[100vw] max-w-[100vw] gap-0 rounded-none border-0 bg-black p-0 ring-0 sm:w-full sm:max-w-4xl sm:gap-4 sm:rounded-xl sm:bg-popover sm:p-4 sm:ring-1 sm:ring-foreground/10"
+        showCloseButton={false}
+        className="h-[100dvh] w-[100vw] max-w-[100vw] gap-0 rounded-none border-0 bg-black p-0 ring-0 sm:max-w-[100vw]"
         aria-describedby={undefined}
       >
         <DialogHeader className="sr-only">
           <DialogTitle>{imageAlt}</DialogTitle>
         </DialogHeader>
-        <RecipeImage
-          src={imageSrc}
-          alt={imageAlt}
-          className="h-[85dvh] w-full bg-black sm:h-auto sm:max-h-[80vh] sm:aspect-video sm:rounded-lg sm:bg-muted"
-          imageClassName="object-contain"
-          sizes="100vw"
-          priority
-        />
+
+        <div className="relative flex h-[100dvh] w-full items-center justify-center">
+          <DialogClose
+            render={
+              <button
+                type="button"
+                className="absolute inset-0"
+                aria-label="Close photo"
+              />
+            }
+          />
+
+          <div className="pointer-events-none relative z-10 h-full w-full">
+            <RecipeImage
+              src={imageSrc}
+              alt={imageAlt}
+              className="h-full w-full bg-black"
+              imageClassName="object-contain"
+              sizes="100vw"
+              priority
+            />
+          </div>
+
+          <DialogClose
+            render={
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                className="absolute top-[max(1rem,env(safe-area-inset-top))] right-[max(1rem,env(safe-area-inset-right))] z-20 size-11 rounded-full bg-black/60 text-white hover:bg-black/80 hover:text-white"
+                aria-label="Close photo"
+              />
+            }
+          >
+            <XIcon className="size-5" />
+          </DialogClose>
+        </div>
       </DialogContent>
     </Dialog>
   );
