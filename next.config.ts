@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    localPatterns: [
+      {
+        // Allow recipe/logo assets, including ?v=mtime cache-busting query strings
+        pathname: "/assets/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

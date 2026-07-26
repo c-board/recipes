@@ -1,5 +1,4 @@
-import { access, readdir, readFile } from "fs/promises";
-import { constants } from "fs";
+import { readdir, readFile, stat } from "fs/promises";
 import path from "path";
 
 export type Recipe = {
@@ -19,8 +18,9 @@ async function getRecipeImage(slug: string): Promise<string | undefined> {
 
   for (const location of locations) {
     try {
-      await access(location, constants.F_OK);
-      return `/assets/${slug}.png`;
+      const fileStat = await stat(location);
+      // Bust Next.js / browser caches when the file on disk is replaced
+      return `/assets/${slug}.png?v=${Math.round(fileStat.mtimeMs)}`;
     } catch {
       continue;
     }
