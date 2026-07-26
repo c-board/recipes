@@ -19,7 +19,7 @@ export default async function Home() {
             priority
           />
           <h1 className="font-heading text-4xl font-semibold tracking-tight">
-            Recipes
+            CB Recipes
           </h1>
         </div>
       </header>
