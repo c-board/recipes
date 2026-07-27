@@ -1,7 +1,6 @@
 "use client";
 
 import { TimerIcon } from "lucide-react";
-import React from "react";
 import { useTimer } from "@/components/timer-provider";
 import { cn } from "@/lib/utils";
 

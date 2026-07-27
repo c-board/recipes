@@ -1,7 +1,6 @@
 "use client";
 
 import { XIcon } from "lucide-react";
-import React from "react";
 import { useTimer } from "@/components/timer-provider";
 import { Button } from "@/components/ui/button";
 import { formatRemaining } from "@/lib/parse-durations";

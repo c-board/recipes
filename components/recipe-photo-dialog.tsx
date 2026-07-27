@@ -1,7 +1,6 @@
 "use client";
 
 import { XIcon } from "lucide-react";
-import React from "react";
 import { RecipeImage } from "@/components/recipe-image";
 import { Button } from "@/components/ui/button";
 import {

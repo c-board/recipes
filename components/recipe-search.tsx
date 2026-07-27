@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import type { Recipe } from "@/lib/recipes";
 import { RecipeImage } from "@/components/recipe-image";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
