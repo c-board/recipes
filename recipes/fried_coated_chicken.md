@@ -1,3 +1,9 @@
+---
+tags:
+  - fry
+  - chicken
+---
+
 ## Ingredients
 
 - chicken breasts

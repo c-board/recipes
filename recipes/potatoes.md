@@ -1,3 +1,9 @@
+---
+tags:
+  - smoke
+  - sides
+---
+
 ## Ingredients
 
 - potatoes

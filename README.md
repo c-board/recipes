@@ -5,6 +5,7 @@ A personal recipe site built with Next.js and shadcn/ui. Recipes live as Markdow
 ## Features
 
 - Browse and search recipes on the home page
+- Recipe tags on cards and detail pages (searchable)
 - Recipe detail pages with Markdown ingredients/instructions and photo lightbox
 - Cook mode: full-screen step-by-step cooking with wake lock, ingredient checklist, and timers
 - Command palette (`⌘K` / `Ctrl+K`) to jump to any recipe
@@ -19,7 +20,24 @@ A personal recipe site built with Next.js and shadcn/ui. Recipes live as Markdow
 
 ## Adding a recipe
 
-1. Create `recipes/my_dish.md` with ingredients and instructions.
+1. Create `recipes/my_dish.md` with optional YAML frontmatter tags, plus ingredients and instructions:
+
+```md
+---
+tags:
+  - air-fryer
+  - quick
+---
+
+## Ingredients
+
+- ...
+
+## Instructions
+
+1. ...
+```
+
 2. Optionally add `public/assets/my_dish.png` for a photo.
 3. The home list, detail route, and `llms.txt` update automatically from the Markdown files.
 

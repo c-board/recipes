@@ -1,3 +1,9 @@
+---
+tags:
+  - air-fryer
+  - sides
+---
+
 https://www.youtube.com/watch?v=XKiRQG4q_bA&ab_channel=MasonWoodruff
 
 ## Ingredients

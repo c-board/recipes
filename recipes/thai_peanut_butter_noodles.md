@@ -1,3 +1,10 @@
+---
+tags:
+  - stovetop
+  - noodles
+  - chicken
+---
+
 ## Ingredients
 
 ### Sauce

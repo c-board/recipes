@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import type { Recipe } from "@/lib/recipes";
+import type { Recipe } from "@/lib/recipe-types";
 import { Button } from "@/components/ui/button";
 import {
   Command,

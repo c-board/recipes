@@ -1,3 +1,10 @@
+---
+tags:
+  - grill
+  - beef
+  - quick
+---
+
 ## Ingredients
 
 - ground beef

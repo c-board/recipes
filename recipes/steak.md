@@ -1,3 +1,8 @@
+---
+tags:
+  - beef
+---
+
 https://www.youtube.com/watch?v=tjQWzOFFxKU
 
 https://www.youtube.com/watch?v=Bc8udhll8qo

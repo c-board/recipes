@@ -1,3 +1,9 @@
+---
+tags:
+  - quick
+  - breakfast
+---
+
 ## Ingredients
 
 - 1 slice of bread

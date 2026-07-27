@@ -1,3 +1,10 @@
+---
+tags:
+  - grill
+  - smoke
+  - chicken
+---
+
 ## Ingredients
 
 - chicken breasts or thighs

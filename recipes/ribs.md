@@ -1,3 +1,9 @@
+---
+tags:
+  - smoke
+  - beef
+---
+
 ## Ingredients
 
 - ribs

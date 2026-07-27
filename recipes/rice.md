@@ -1,3 +1,9 @@
+---
+tags:
+  - stovetop
+  - sides
+---
+
 ## Ingredients
 
 ### Sushi Rice

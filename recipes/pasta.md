@@ -1,3 +1,9 @@
+---
+tags:
+  - stovetop
+  - beef
+---
+
 ## Ingredients
 
 - penne pasta

@@ -1,3 +1,11 @@
+---
+tags:
+  - smoke
+  - grill
+  - oven
+  - seafood
+---
+
 ## Ingredients
 
 ### Salmon

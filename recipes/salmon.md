@@ -1,3 +1,10 @@
+---
+tags:
+  - oven
+  - seafood
+  - quick
+---
+
 ## Ingredients
 
 - salmon

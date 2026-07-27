@@ -1,3 +1,10 @@
+---
+tags:
+  - quick
+  - sides
+  - stovetop
+---
+
 ## Ingredients
 
 - green beans

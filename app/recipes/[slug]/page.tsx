@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { CookMode } from "@/components/cook-mode";
 import { RecipeContent } from "@/components/recipe-content";
 import { RecipePhotoDialog } from "@/components/recipe-photo-dialog";
+import { RecipeTags } from "@/components/recipe-tags";
 import { TimerProvider } from "@/components/timer-provider";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -48,9 +49,12 @@ export default async function RecipePage({ params }: RecipePageProps) {
         </Link>
 
         <header className="flex flex-col gap-4">
-          <h1 className="font-heading text-3xl font-semibold tracking-tight">
-            {recipe.title}
-          </h1>
+          <div className="flex flex-col gap-2">
+            <h1 className="font-heading text-3xl font-semibold tracking-tight">
+              {recipe.title}
+            </h1>
+            <RecipeTags tags={recipe.tags} />
+          </div>
           {recipe.image ? (
             <RecipePhotoDialog
               imageSrc={recipe.image}

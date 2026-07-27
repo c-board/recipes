@@ -1,12 +1,9 @@
 import { readdir, readFile, stat } from "fs/promises";
 import path from "path";
+import { parseRecipeMarkdown } from "@/lib/frontmatter";
+import type { Recipe } from "@/lib/recipe-types";
 
-export type Recipe = {
-  slug: string;
-  title: string;
-  content: string;
-  image?: string;
-};
+export type { Recipe } from "@/lib/recipe-types";
 
 const RECIPES_DIR = path.join(process.cwd(), "recipes");
 
@@ -53,41 +50,29 @@ async function getRecipeSlugs(): Promise<string[]> {
     .map((file) => file.replace(/\.md$/, ""));
 }
 
+async function loadRecipe(slug: string): Promise<Recipe> {
+  const raw = await readFile(path.join(RECIPES_DIR, `${slug}.md`), "utf-8");
+  const { frontmatter, content } = parseRecipeMarkdown(raw);
+  const image = await getRecipeImage(slug);
+
+  return {
+    slug,
+    title: slugToTitle(slug),
+    content,
+    tags: frontmatter.tags,
+    image,
+  };
+}
+
 export async function getAllRecipes(): Promise<Recipe[]> {
   const slugs = await getRecipeSlugs();
-  const recipes = await Promise.all(
-    slugs.map(async (slug) => {
-      const content = await readFile(
-        path.join(RECIPES_DIR, `${slug}.md`),
-        "utf-8",
-      );
-      const image = await getRecipeImage(slug);
-
-      return {
-        slug,
-        title: slugToTitle(slug),
-        content,
-        image,
-      };
-    }),
-  );
-
+  const recipes = await Promise.all(slugs.map((slug) => loadRecipe(slug)));
   return recipes.sort((a, b) => a.title.localeCompare(b.title));
 }
 
 export async function getRecipeBySlug(slug: string): Promise<Recipe | null> {
-  const filePath = path.join(RECIPES_DIR, `${slug}.md`);
-
   try {
-    const content = await readFile(filePath, "utf-8");
-    const image = await getRecipeImage(slug);
-
-    return {
-      slug,
-      title: slugToTitle(slug),
-      content,
-      image,
-    };
+    return await loadRecipe(slug);
   } catch {
     return null;
   }

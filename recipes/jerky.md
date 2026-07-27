@@ -1,3 +1,9 @@
+---
+tags:
+  - smoke
+  - beef
+---
+
 ## Ingredients
 
 - center round cut of beef

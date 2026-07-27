@@ -1,3 +1,9 @@
+---
+tags:
+  - fry
+  - pork
+---
+
 ## Ingredients
 
 - pork loin or pork tenderloin chops
