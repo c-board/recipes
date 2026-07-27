@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import type { Recipe } from "@/lib/recipe-types";
+import { formatTagLabel } from "@/lib/frontmatter";
 import { Button } from "@/components/ui/button";
 import {
   Command,
@@ -73,10 +74,10 @@ export const RecipeCommandMenu = ({ recipes }: RecipeCommandMenuProps) => {
         open={open}
         onOpenChange={setOpen}
         title="Search recipes"
-        description="Jump to a recipe by name or ingredient"
+        description="Jump to a recipe by name, ingredient, or tag"
       >
         <Command>
-          <CommandInput placeholder="Search recipes and ingredients..." />
+          <CommandInput placeholder="Search recipes, ingredients, or tags..." />
           <CommandList>
             <CommandEmpty>No recipes found.</CommandEmpty>
             <CommandGroup heading="Navigation">
@@ -91,10 +92,17 @@ export const RecipeCommandMenu = ({ recipes }: RecipeCommandMenuProps) => {
               {recipes.map((recipe) => (
                 <CommandItem
                   key={recipe.slug}
-                  value={`${recipe.title} ${recipe.content}`}
+                  value={`${recipe.title} ${recipe.tags.join(" ")} ${recipe.content}`}
                   onSelect={() => navigate(`/recipes/${recipe.slug}`)}
                 >
-                  {recipe.title}
+                  <span className="flex min-w-0 flex-col gap-0.5">
+                    <span className="truncate">{recipe.title}</span>
+                    {recipe.tags.length > 0 ? (
+                      <span className="truncate text-xs text-muted-foreground">
+                        {recipe.tags.map(formatTagLabel).join(" · ")}
+                      </span>
+                    ) : null}
+                  </span>
                 </CommandItem>
               ))}
             </CommandGroup>
