@@ -39,7 +39,7 @@ export const RecipePhotoDialog = ({
           className="aspect-video w-full"
           imageClassName="object-cover"
           sizes="(max-width: 768px) 100vw, 768px"
-          priority
+          loading="eager"
         />
       </DialogTrigger>
       <DialogContent
@@ -69,7 +69,7 @@ export const RecipePhotoDialog = ({
               className="h-full w-full bg-black"
               imageClassName="object-contain"
               sizes="100vw"
-              priority
+              loading="eager"
             />
           </div>
 

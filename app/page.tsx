@@ -16,7 +16,7 @@ export default async function Home() {
             width={48}
             height={48}
             className="size-12 rounded-md"
-            priority
+            loading="eager"
           />
           <h1 className="font-heading text-4xl font-semibold tracking-tight">
             CB Recipes

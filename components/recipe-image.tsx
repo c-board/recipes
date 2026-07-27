@@ -9,7 +9,7 @@ type RecipeImageProps = {
   src: string;
   alt: string;
   sizes: string;
-  priority?: boolean;
+  loading?: "eager" | "lazy";
   className?: string;
   imageClassName?: string;
 };
@@ -18,7 +18,7 @@ export const RecipeImage = ({
   src,
   alt,
   sizes,
-  priority = false,
+  loading = "lazy",
   className,
   imageClassName,
 }: RecipeImageProps) => {
@@ -32,7 +32,7 @@ export const RecipeImage = ({
         alt={alt}
         fill
         sizes={sizes}
-        priority={priority}
+        loading={loading}
         onLoad={() => setLoaded(true)}
         className={cn(
           "transition-opacity duration-300",

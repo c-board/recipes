@@ -40,7 +40,7 @@ export const RecipeSearch = ({ recipes }: RecipeSearchProps) => {
 
       {filtered.length > 0 ? (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((recipe) => {
+          {filtered.map((recipe, index) => {
             const imageSrc = recipe.image ?? PLACEHOLDER_IMAGE;
             const imageAlt = recipe.image
               ? `Photo of ${recipe.title}`
@@ -56,6 +56,7 @@ export const RecipeSearch = ({ recipes }: RecipeSearchProps) => {
                       className="aspect-video w-full"
                       imageClassName="object-cover"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading={index === 0 ? "eager" : "lazy"}
                     />
                     <CardHeader>
                       <CardTitle>{recipe.title}</CardTitle>
