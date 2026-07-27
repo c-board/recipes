@@ -16,7 +16,7 @@ export const ActiveTimerBar = () => {
   return (
     <div
       className={cn(
-        "fixed inset-x-0 bottom-0 z-40 border-t bg-background/95 backdrop-blur-sm",
+        "fixed inset-x-0 bottom-0 z-[60] border-t bg-background/95 backdrop-blur-sm",
         "pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3",
       )}
       role="status"

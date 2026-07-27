@@ -6,6 +6,7 @@ A personal recipe site built with Next.js and shadcn/ui. Recipes live as Markdow
 
 - Browse and search recipes on the home page
 - Recipe detail pages with Markdown ingredients/instructions and photo lightbox
+- Cook mode: full-screen step-by-step cooking with wake lock, ingredient checklist, and timers
 - Command palette (`⌘K` / `Ctrl+K`) to jump to any recipe
 - `llms.txt` feed for AI / ChatGPT Voice use (see below)
 

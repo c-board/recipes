@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CookMode } from "@/components/cook-mode";
 import { RecipeContent } from "@/components/recipe-content";
 import { RecipePhotoDialog } from "@/components/recipe-photo-dialog";
 import { TimerProvider } from "@/components/timer-provider";
@@ -56,6 +57,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
               imageAlt={`Photo of ${recipe.title}`}
             />
           ) : null}
+          <CookMode title={recipe.title} content={recipe.content} />
         </header>
 
         <Separator />
