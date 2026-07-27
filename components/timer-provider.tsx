@@ -174,6 +174,23 @@ export const TimerProvider = ({ children }: TimerProviderProps) => {
       return;
     }
 
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== "Escape" || event.defaultPrevented) {
+        return;
+      }
+      event.preventDefault();
+      cancel();
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [activeTimer, cancel]);
+
+  useEffect(() => {
+    if (!activeTimer) {
+      return;
+    }
+
     function tick() {
       const timer = activeTimerRef.current;
       if (!timer) {
