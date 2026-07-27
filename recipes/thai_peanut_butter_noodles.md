@@ -24,8 +24,9 @@
 ## Instructions
 
 1. In a large pot, bring water to a boil.
-2. Add the noodles and cook according to the package instructions.
+2. Add the noodles and cook for 8–10 minutes.
 3. Drain the noodles and rinse with cold water.
-4. In a small bowl, mix the peanut butter, soy sauce, honey, rice vinegar, water, and sugar.
-5. Add the noodles to the peanut butter sauce and mix well.
-6. Serve with your favorite toppings.
+4. Cook the chicken for 6–8 minutes, then dice for topping.
+5. In a small bowl, mix the peanut butter, soy sauce, honey, rice vinegar, water, and sugar.
+6. Add the noodles to the peanut butter sauce and mix well.
+7. Serve with chicken and your favorite toppings.

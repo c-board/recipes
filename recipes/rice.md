@@ -17,4 +17,6 @@
 
 ## Instructions
 
-1. Rinse rice and cook with the listed water ratio.
+1. Rinse rice.
+2. For sushi rice, cook with the listed water ratio for 18 minutes.
+3. For brown or mixed rice, cook with the listed water ratio for 40–45 minutes.

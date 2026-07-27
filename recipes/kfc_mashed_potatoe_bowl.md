@@ -22,7 +22,7 @@
 
 1. Season the chicken pieces with salt and pepper.
 2. Dredge each piece in flour, then egg, then bread crumbs.
-3. Fry in oil until golden and cooked through.
+3. Fry in oil for 4–6 minutes until golden and cooked through.
 4. Add a layer of mashed potatoes to the bottom of a bowl.
 5. Top with gravy, corn, and the fried chicken.
 6. Sprinkle with sliced green onions (and cheese, if using) and serve.

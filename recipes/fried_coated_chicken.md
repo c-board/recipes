@@ -19,7 +19,7 @@
 1. Slice chicken breasts into thin cutlets and season with salt and pepper.
 2. crush crackers and add together with parmesan
 3. Dredge each cutlet in flour, then egg, then coating.
-4. Fry in oil until golden and cooked through, then slice.
-5. Steam the broccoli.
+4. Fry in oil for 3–4 minutes per side until golden and cooked through, then slice.
+5. Steam the broccoli for 5 minutes.
 6. Plate the sliced chicken over white rice with broccoli on the side.
 7. Drizzle with hot sauce and japanese mayo, then sprinkle with dried oregano.
